@@ -51,14 +51,18 @@ button{
     text-align: center;
 }
 /* 집 내부 전체 영역 */
-.game-area{
+.game-area,
+.garden-area{
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8e5d0;
     border-radius: 15px;
     box-sizing: border-box;
+}
+/* 집 내부 배경색 */
+.game-area{
+    background-color: #f8e5d0;
 }
 /* 집 내부 벽면 영역 */
 #wall-grid{
@@ -75,6 +79,7 @@ button{
 }
 /* 집 내부 바닥 격자 */
 #house-grid{
+    position: relative;
     width: 100%;
     aspect-ratio: 8/6;
     background-color: #f5e0cc;
@@ -85,16 +90,11 @@ button{
     linear-gradient(to bottom, #d9b8a4 1px, transparent 1px);
 
     background-size: 12.5% 16.6667% ;
+    overflow: hidden;
 }
 /* 마당 전체 영역 */
 .garden-area{
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #d9edc7;
-    border-radius: 15px;
-    box-sizing: border-box;
 }
 /* 마당 자유 배치 격자 */
 #garden-grid{
@@ -108,4 +108,37 @@ button{
     linear-gradient(to bottom, #a3c28a 1px, transparent 1px);
 
     background-size: 12.5% 16.6667% ;
+}
+/* 배치된 인테리어 아이템 */
+.placed-furniture{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    pointer-events: none;
+}
+/* 가구 배치 상태 안내 */
+#placement-message {
+    color: #86634e;
+    font-size: 14px;
+    margin: 10px 0;
+    min-height: 20px;
+}
+/* 배치 전 반투명 가구 미리보기 */
+.furniture-preview{
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #6a9b60;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 40px;
+    pointer-events: none; /* 미리보기 요소가 마우스 이벤트를 가로채지 않도록 해주는 속성 */
+    z-index: 10; /* 기존에 설치된 가구보다 미리보기가 위에 표시되도록 하는 설정 */ 
+}
+/* 미리보기 안의 가구 그림 */
+.furniture-preview span{
+    opacity: 0.6; /* 이모지 반투명하게 만들어줌 */
 }

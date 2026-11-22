@@ -19,13 +19,21 @@
                 <!-- 벽면 장식 배치 영역 -->
                 <div id="wall-grid"></div>
 
+                <!-- 임시 가구 배치 버튼 -->
+                <button onclick="selectFurniture('bear')">곰인형 배치하기</button>
+                <button onclick="selectFurniture('sofa')">소파 배치하기</button>
+                <button onclick="rotateFurniture()">가구 회전</button>
+                
+                <!-- 가구 배치 상태 안내 -->
+                <p id="placement-message">배치할 가구를 선택하세요.</p>
+
                 <!-- 바닥 기구 배치 영역 -->
                 <div id="house-grid"></div>
             </div>
         </section>
         
         <section id ="outside">
-            <h2>나의 마당</h2>
+            <h2>My Garden</h2>
             <div class="garden-area">
                 <!-- 마당 자유 배치 영역 -->
                 <div id="garden-grid"></div>
