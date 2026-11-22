@@ -1,17 +1,21 @@
+/* 전체 페이지 */
 body {
     background-color : #fff8f0;
     color: #4b3b32;
     font-family : Arial, sans-serif;
     margin: 0;
 }
+/* 상단 게임 정보 */
 header{
     background-color: #f5d9c7;
     padding :20px;
     text-align: center;
 }
+/* 메인 콘텐츠 */
 main{
     padding: 20px;
 }
+/* 집 내부 및 마당 공통 영역 */
 section{
     background-color: white;
     border: 1px solid #d9b8a4;
@@ -19,11 +23,13 @@ section{
     padding: 20px;
     margin-bottom: 20px;
 }
+/* 하단 메뉴 */
 nav {
     background-color: #f5d9c7;
     padding: 15px;
     text-align: center;
 }
+/* 버튼 디자인 */
 button{
     background-color: white;
     border: 1px solid #b88f79;
@@ -32,14 +38,74 @@ button{
     margin: 5px;
     cursor: pointer;
 }
-
+/* 집 내부 화면 */
 #inside {
     background-color: #fff0df;
     min-height: 250px;
     text-align: center;
 }
+/* 마당 화면 */
 #outside {
     background-color: #e4f0d6;
     min-height: 250px;
     text-align: center;
+}
+/* 집 내부 전체 영역 */
+.game-area{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8e5d0;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+/* 집 내부 벽면 영역 */
+#wall-grid{
+    width: 100%;
+    aspect-ratio: 8/2;
+    background-color: #f5d9c7;
+    border: 1px solid #b88f79;
+    box-sizing: border-box;
+
+    background-image: linear-gradient(to right, #d9b8a4 1px, transparent 1px),
+    linear-gradient(to bottom, #d9b8a4 1px, transparent 1px);
+
+    background-size: 12.5% 50% ;
+}
+/* 집 내부 바닥 격자 */
+#house-grid{
+    width: 100%;
+    aspect-ratio: 8/6;
+    background-color: #f5e0cc;
+    border: 1px solid #b88f79;
+    box-sizing: border-box;
+
+    background-image: linear-gradient(to right, #d9b8a4 1px, transparent 1px),
+    linear-gradient(to bottom, #d9b8a4 1px, transparent 1px);
+
+    background-size: 12.5% 16.6667% ;
+}
+/* 마당 전체 영역 */
+.garden-area{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d9edc7;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+/* 마당 자유 배치 격자 */
+#garden-grid{
+    width: 100%;
+    aspect-ratio: 8/6;
+    background-color: #e4f0d6;
+    border: 1px solid #85a76b;
+    box-sizing: border-box;
+
+    background-image: linear-gradient(to right, #a3c28a 1px, transparent 1px),
+    linear-gradient(to bottom, #a3c28a 1px, transparent 1px);
+
+    background-size: 12.5% 16.6667% ;
 }
